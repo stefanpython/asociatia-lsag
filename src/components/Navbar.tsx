@@ -6,9 +6,9 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Projects", href: "/projects" },
+  { label: "Despre noi", href: "/" },
+  { label: "Servicii", href: "/about" },
+  { label: "Proiecte", href: "/projects" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -20,12 +20,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gray-800 text-white">
+    <nav className="bg-white text-[#4169E1] shadow-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold">
-              Asociatia "Lasa-ma sa-ti aud glasul"
+            <a href="/" className="text-xl font-bold">
+              <span className="italic text-2xl sm:text-3xl">
+                Lasa-ma sa-ti aud glasul
+              </span>
             </a>
           </div>
           <div className="hidden md:flex space-x-4">
@@ -33,7 +35,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="text-[#4169E1] hover:text-gray-300 px-1 py-2 rounded-md text-lg font-semibold"
               >
                 {link.label}
               </a>
@@ -43,23 +45,40 @@ export default function Navbar() {
             <button
               type="button"
               onClick={toggleMobileMenu}
-              className="text-gray-300 hover:text-white focus:outline-none"
+              className="text-[#4169E1] hover:text-white focus:outline-none"
             >
-              {/* Hamburger icon */}
-              <svg
-                className="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              {/* Conditionally render the Hamburger or Close Icon */}
+              {isMobileMenuOpen ? (
+                <svg
+                  className="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="#4169E1"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="#4169E1"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
             </button>
           </div>
         </div>
@@ -73,7 +92,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="text-[#4169E1] hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
                 onClick={() => setMobileMenuOpen(false)} // Close menu on link click
               >
                 {link.label}

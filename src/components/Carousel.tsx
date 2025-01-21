@@ -29,7 +29,7 @@ export default function Carousel() {
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[880px] object-cover"
               />
             </div>
           ))}

@@ -20,7 +20,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white text-[#4169E1] shadow-xl">
+    <nav className="bg-[rgba(255,255,255,0.5)] text-[#4199e1] shadow-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
@@ -35,7 +35,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[#4169E1] hover:text-gray-300 px-1 py-2 rounded-md text-lg font-semibold"
+                className="text-[#4199e1] hover:text-gray-300 px-1 py-2 rounded-md text-lg font-semibold"
               >
                 {link.label}
               </a>
@@ -45,7 +45,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={toggleMobileMenu}
-              className="text-[#4169E1] hover:text-white focus:outline-none"
+              className="text-[#4199e1] hover:text-white focus:outline-none"
             >
               {/* Conditionally render the Hamburger or Close Icon */}
               {isMobileMenuOpen ? (
@@ -54,7 +54,7 @@ export default function Navbar() {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="#4169E1"
+                  stroke="#4199e1"
                 >
                   <path
                     strokeLinecap="round"
@@ -69,7 +69,7 @@ export default function Navbar() {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="#4169E1"
+                  stroke="#4199e1"
                 >
                   <path
                     strokeLinecap="round"
@@ -92,7 +92,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[#4169E1] hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
+                className="text-[#4199e1] hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
                 onClick={() => setMobileMenuOpen(false)} // Close menu on link click
               >
                 {link.label}

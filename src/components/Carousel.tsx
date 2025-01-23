@@ -27,67 +27,169 @@ export default function Carousel() {
           {images.map((image, index) => (
             <div key={index} className="flex-shrink-0 w-full relative">
               <img
-                src={image}
+                src={image || "/placeholder.svg"}
                 alt={`Slide ${index + 1}`}
                 className="w-full h-[880px] object-cover object-[center_30%] filter brightness-75 contrast-110"
               />
-              <div className="absolute top-0 left-0 w-full h-full bg-blue-500 opacity-30"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 opacity-30"></div>
 
-              {/* First Text Animation */}
-              <motion.div
-                className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-semibold -ml-16"
-                initial={{ opacity: 0, y: "-100%" }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 1,
-                  type: "spring",
-                  stiffness: 50,
-                  damping: 25,
-                }}
-                key={`text-1-${currentIndex}`}
-              >
-                First Text
-              </motion.div>
+              {index === 0 && (
+                <>
+                  {/* First Slide Animations */}
+                  <motion.div
+                    className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-extrabold"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                      delay: 0.5,
+                      type: "spring",
+                      stiffness: 100,
+                      damping: 30,
+                    }}
+                    key={`text-1-${currentIndex}`}
+                  >
+                    Exploreaza-ti viitorul
+                  </motion.div>
 
-              {/* Second Text Animation */}
-              <motion.div
-                className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-semibold mt-10 -ml-16"
-                initial={{ opacity: 0, y: "-100%" }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 2,
-                  type: "spring",
-                  stiffness: 50,
-                  damping: 25,
-                }}
-                key={`text-2-${currentIndex}`}
-              >
-                <div className="bg-[#4199e1] max-w-[840px] -ml-[340px] p-8 rounded-tr-3xl rounded-bl-3xl">
-                  <p className="text-5xl font-normal">
-                    Asociatia "Lasa-ma sa-ti aud glasul"
-                  </p>
-                </div>
-              </motion.div>
+                  <motion.div
+                    className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-semibold mt-10"
+                    initial={{ opacity: 0, x: "-100%" }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 1,
+                      type: "spring",
+                      stiffness: 80,
+                      damping: 25,
+                    }}
+                    key={`text-2-${currentIndex}`}
+                  >
+                    <div className="bg-gradient-to-r from-teal-400 to-cyan-500 max-w-[840px] p-8 rounded-tr-3xl rounded-bl-3xl">
+                      <p className="text-5xl font-normal">
+                        Transformă-ți cuvintele în acțiune.
+                      </p>
+                    </div>
+                  </motion.div>
 
-              {/* Third Text Animation */}
-              <motion.div
-                className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-semibold mt-36 -ml-16"
-                initial={{ opacity: 0, y: "-100%" }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 3,
-                  type: "spring",
-                  stiffness: 50,
-                  damping: 25,
-                }}
-                key={`text-3-${currentIndex}`}
-              >
-                <div className="bg-white max-w-[840px] -ml-[160px] p-2 rounded-b-3xl ">
-                  <p className="text-3xl font-normal text-gray-700">
-                    Împreună, dăm voce fiecărei ființe.
-                  </p>
-                </div>
-              </motion.div>
+                  <motion.div
+                    className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-semibold mt-36"
+                    initial={{ opacity: 0, y: "100%" }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: 1.5,
+                      type: "spring",
+                      stiffness: 50,
+                      damping: 25,
+                    }}
+                    key={`text-3-${currentIndex}`}
+                  >
+                    <div className="bg-white max-w-[840px] -ml-[160px] p-2 rounded-b-3xl">
+                      <p className="text-3xl font-normal text-gray-700">
+                        Împreună, dăm voce fiecărei ființe.
+                      </p>
+                    </div>
+                  </motion.div>
+                </>
+              )}
+
+              {index === 1 && (
+                <>
+                  {/* Second Slide Animations */}
+                  <motion.div
+                    className="absolute top-1/4 left-1/2 transform -translate-x-1/2 text-white text-5xl font-bold text-center"
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5, duration: 0.8 }}
+                    key={`text-1-${currentIndex}`}
+                  >
+                    Inovație în Acțiune
+                  </motion.div>
+
+                  <motion.div
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl text-center max-w-2xl"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 1, duration: 0.8 }}
+                    key={`text-2-${currentIndex}`}
+                  >
+                    <p className="bg-black bg-opacity-50 p-6 rounded-lg">
+                      Descoperă soluții revoluționare care transformă și
+                      îmbunătățesc vieți.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    className="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 flex space-x-4"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.5, duration: 0.8 }}
+                    key={`text-3-${currentIndex}`}
+                  >
+                    {["Tehnologie", "Sustenabilitate", "Progres"].map(
+                      (item, i) => (
+                        <motion.div
+                          key={i}
+                          className="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold"
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: 1.5 + i * 0.2, duration: 0.5 }}
+                        >
+                          {item}
+                        </motion.div>
+                      )
+                    )}
+                  </motion.div>
+                </>
+              )}
+
+              {index === 2 && (
+                <>
+                  {/* Third Slide Animations */}
+                  <motion.div
+                    className="absolute top-1/4 left-1/2 transform -translate-x-1/2 text-white text-6xl font-extrabold"
+                    initial={{ opacity: 0, rotateX: 90 }}
+                    animate={{ opacity: 1, rotateX: 0 }}
+                    transition={{ delay: 0.5, duration: 1, type: "spring" }}
+                    key={`text-1-${currentIndex}`}
+                  >
+                    Viitorul Este Acum
+                  </motion.div>
+
+                  <motion.div
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.5, duration: 1 }}
+                    key={`text-2-${currentIndex}`}
+                  >
+                    {["Conectează", "Inovează", "Transformă"].map((item, i) => (
+                      <motion.div
+                        key={i}
+                        className="text-white text-4xl font-bold mb-4"
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 1.5 + i * 0.3, duration: 0.5 }}
+                      >
+                        {item}
+                      </motion.div>
+                    ))}
+                  </motion.div>
+
+                  <motion.div
+                    className="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 bg-white text-blue-600 px-8 py-4 rounded-lg text-2xl font-bold"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                      delay: 2.5,
+                      type: "spring",
+                      stiffness: 200,
+                      damping: 20,
+                    }}
+                    key={`text-3-${currentIndex}`}
+                  >
+                    Alătură-te Revoluției
+                  </motion.div>
+                </>
+              )}
             </div>
           ))}
         </div>
@@ -96,13 +198,13 @@ export default function Carousel() {
       {/* Prev and Next Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all"
       >
         &#10094;
       </button>
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all"
       >
         &#10095;
       </button>

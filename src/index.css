@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .clip-top {
+    clip-path: ellipse(100% 57% at 50% 10%);
+  }
+
+  .circle {
+    clip-path: circle(50% at 50% 50%);
+  }
+
+  .ellipse {
+    clip-path: ellipse(50% 30% at 50% 50%);
+  }
+
+  .polygon {
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  }
+
+  .inset {
+    clip-path: inset(10% 20% 30% 40%);
+  }
+}

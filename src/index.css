@@ -4,11 +4,11 @@
 
 @layer utilities {
   .clip-top {
-    clip-path: ellipse(100% 57% at 50% 10%);
+    clip-path: ellipse(100% 65% at 50% 10%);
   }
 
   .circle {
-    clip-path: circle(50% at 50% 50%);
+    clip-path: circle(66% at 50% 50%);
   }
 
   .ellipse {

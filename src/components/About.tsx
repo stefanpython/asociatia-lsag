@@ -20,7 +20,7 @@ const aboutSections = [
 
 const About: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-r from-blue-500 to-purple-600 text-white overflow-hidden">
+    <section className="relative bg-gradient-to-r from-blue-500 to-purple-600 text-white overflow-hidden ">
       {/* Purple background with curved top */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 clip-top z-20 "></div>
 

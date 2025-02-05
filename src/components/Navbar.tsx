@@ -24,6 +24,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
+            <img
+              src="/original.png"
+              alt="Logo"
+              className="h-16 w-16 sm:h-20 sm:w-20 mr-2"
+            />
+
             <a href="/" className="text-xl font-bold">
               <span className="italic text-2xl sm:text-3xl">
                 Lasa-ma sa-ti aud glasul

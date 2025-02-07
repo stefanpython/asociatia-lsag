@@ -33,7 +33,21 @@ export default function Projects() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <div ref={ref} className="bg-[#2e76b0] py-20 relative">
+    <div ref={ref} className="bg-[#2e76b0] py-20 relative mt-10">
+      {/* Curly wave top border */}
+      <div className="absolute -top-8 left-0 w-full overflow-hidden">
+        <svg
+          viewBox="0 0 1200 40"
+          preserveAspectRatio="none"
+          className="w-full h-8"
+        >
+          <path
+            d="M0,40 C150,40 200,0 400,0 C600,0 650,40 800,40 C950,40 1000,0 1200,0 L1200,40 L0,40 Z"
+            fill="#2e76b0"
+          />
+        </svg>
+      </div>
+
       <div className="max-w-6xl mx-auto px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: -50 }}

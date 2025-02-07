@@ -43,12 +43,26 @@ const servicii = [
 
 export default function Servicii() {
   const { ref, inView } = useInView({
-    triggerOnce: true, // Animates only once
-    threshold: 0.2, // Triggers when 20% of the component is visible
+    triggerOnce: true,
+    threshold: 0.2,
   });
 
   return (
-    <div ref={ref} className="bg-gray-100 py-12 ">
+    <div ref={ref} className="bg-gray-100 py-12 relative">
+      {/* Top curly wave */}
+      <div className="absolute -top-8 left-0 w-full overflow-hidden">
+        <svg
+          viewBox="0 0 1200 40"
+          preserveAspectRatio="none"
+          className="w-full h-8"
+        >
+          <path
+            d="M0,40 C150,40 200,0 400,0 C600,0 650,40 800,40 C950,40 1000,0 1200,0 L1200,40 L0,40 Z"
+            fill="rgb(243 244 246)"
+          />
+        </svg>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -98,6 +112,20 @@ export default function Servicii() {
             </motion.div>
           ))}
         </div>
+      </div>
+
+      {/* Bottom curly wave */}
+      <div className="absolute -bottom-8 left-0 w-full overflow-hidden">
+        <svg
+          viewBox="0 0 1200 40"
+          preserveAspectRatio="none"
+          className="w-full h-8 rotate-180"
+        >
+          <path
+            d="M0,40 C150,40 200,0 400,0 C600,0 650,40 800,40 C950,40 1000,0 1200,0 L1200,40 L0,40 Z"
+            fill="rgb(243 244 246)"
+          />
+        </svg>
       </div>
     </div>
   );

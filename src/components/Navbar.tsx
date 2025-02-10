@@ -32,11 +32,16 @@ export default function Navbar() {
                 className="h-16 w-16 sm:h-20 sm:w-20 mr-2"
               />
             </div>
-            <a href="/" className="text-xl font-bold">
-              <span className="italic text-2xl sm:text-3xl">
-                Lasa-ma sa-ti aud glasul
-              </span>
-            </a>
+
+            <div>
+              <div className="text-xl font-bold">Asociatia</div>
+
+              <a href="/" className="text-xl font-bold">
+                <span className="italic text-2xl sm:text-3xl">
+                  "Lasa-ma sa-ti aud glasul"
+                </span>
+              </a>
+            </div>
           </div>
           <div className="hidden md:flex space-x-4">
             {navLinks.map((link) => (

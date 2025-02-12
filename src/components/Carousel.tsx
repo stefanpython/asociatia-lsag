@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = ["/5.jpeg", "/2.jpeg", "/3.jpeg"];
+  const images = ["/2a.jpg", "/2.jpeg", "/3.jpeg"];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);

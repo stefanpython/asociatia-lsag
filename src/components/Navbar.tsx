@@ -26,11 +26,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
             <div className="rounded-3xl overflow-hidden">
-              <img
-                src="/original.png"
-                alt="Logo"
-                className="h-16 w-16 sm:h-20 sm:w-20 mr-2"
-              />
+              <a href="/">
+                <img
+                  src="/original.png"
+                  alt="Logo"
+                  className="h-16 w-16 sm:h-20 sm:w-20 mr-2"
+                />
+              </a>
             </div>
 
             <div>

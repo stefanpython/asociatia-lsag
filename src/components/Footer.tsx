@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-6 mt-10">
@@ -14,13 +16,13 @@ const Footer = () => {
 
         {/* Right Section - Links */}
         <div className="text-center md:text-right">
-          <a href="#" className="text-sm hover:text-gray-400">
+          <Link to="/privacy-policy" className="text-sm hover:text-gray-400">
             Privacy Policy
-          </a>
+          </Link>
           <span className="mx-2">|</span>
-          <a href="#" className="text-sm hover:text-gray-400">
+          <Link to="/terms-of-service" className="text-sm hover:text-gray-400">
             Terms of Service
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

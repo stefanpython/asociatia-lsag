@@ -50,10 +50,18 @@ function App() {
             element={
               <>
                 <Carousel />
-                <About />
-                <Services />
-                <Projects />
-                <Contact />
+                <div id="about">
+                  <About />
+                </div>
+                <div id="services">
+                  <Services />
+                </div>
+                <div id="projects">
+                  <Projects />
+                </div>
+                <div id="contact">
+                  <Contact />
+                </div>
               </>
             }
           />

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 
 interface NavLink {
   label: string;
@@ -7,17 +8,38 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: "Despre noi", href: "/" },
-  { label: "Servicii", href: "/about" },
-  { label: "Proiecte", href: "/projects" },
-  { label: "Contact", href: "/contact" },
+  { label: "Despre noi", href: "about" },
+  { label: "Servicii", href: "services" },
+  { label: "Proiecte", href: "projects" },
+  { label: "Contact", href: "contact" },
 ];
 
 export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -37,7 +59,6 @@ export default function Navbar() {
 
             <div>
               <div className="text-xl font-bold">Asociatia</div>
-
               <a href="/" className="text-xl font-bold">
                 <span className="italic text-2xl sm:text-3xl">
                   "Lasa-ma sa-ti aud glasul"
@@ -47,15 +68,15 @@ export default function Navbar() {
           </div>
           <div className="hidden md:flex space-x-4">
             {navLinks.map((link) => (
-              <motion.a
+              <motion.button
                 key={link.href}
-                href={link.href}
+                onClick={() => scrollToSection(link.href)}
                 className="text-[#4199e1] px-3 py-2 rounded-md text-lg font-semibold transition duration-300 ease-in-out hover:underline hover:bg-[#2563eb] hover:text-white"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {link.label}
-              </motion.a>
+              </motion.button>
             ))}
           </div>
           <div className="md:hidden">
@@ -117,15 +138,14 @@ export default function Navbar() {
           >
             <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
               {navLinks.map((link) => (
-                <motion.a
+                <motion.button
                   key={link.href}
-                  href={link.href}
-                  className="text-[#4199e1] block px-3 py-2 rounded-md text-base font-semibold transition duration-300 ease-in-out hover:underline hover:bg-[#2563eb] hover:text-white"
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-[#4199e1] block w-full text-left px-3 py-2 rounded-md text-base font-semibold transition duration-300 ease-in-out hover:underline hover:bg-[#2563eb] hover:text-white"
                   whileHover={{ scale: 1.05 }}
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
-                </motion.a>
+                </motion.button>
               ))}
             </div>
           </motion.div>

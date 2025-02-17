@@ -142,6 +142,16 @@ export default function Contact() {
         <p className="text-gray-700 mt-2">
           <strong>Email:</strong> contact@example.com
         </p>
+
+        <div className="mt-4 relative" style={{ paddingBottom: "56.25%" }}>
+          {/* Google Maps iframe */}
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d702.4932731616965!2d24.663298781207455!3d45.22811197790863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sro!4v1739274109818!5m2!1sen!2sro"
+            className="absolute top-0 left-0 w-full h-full"
+            style={{ border: 0 }}
+            loading="lazy"
+          ></iframe>
+        </div>
       </motion.div>
     </div>
   );

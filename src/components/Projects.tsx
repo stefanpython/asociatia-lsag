@@ -71,7 +71,7 @@ export default function Projects() {
 
       <div className="mt-12 overflow-x-auto flex justify-center text-center scrollbar-hide">
         <motion.div
-          className="flex gap-8 px-6"
+          className="flex flex-wrap gap-8 px-6 max-w-full justify-center"
           initial={{ x: "-100vw" }}
           animate={inView ? { x: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -86,7 +86,7 @@ export default function Projects() {
                 scale: 1.1,
                 rotateY: 10,
               }}
-              className="w-80 flex-shrink-0 bg-[#82a6c5] rounded-xl shadow-xl overflow-hidden transform transition-all duration-500"
+              className="w-full sm:w-80 flex-shrink-0 bg-[#82a6c5] rounded-xl shadow-xl overflow-hidden transform transition-all duration-500"
             >
               <div className="h-52 overflow-hidden">
                 <motion.img

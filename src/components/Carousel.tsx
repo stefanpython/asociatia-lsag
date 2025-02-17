@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Carousel() {
@@ -14,6 +14,13 @@ export default function Carousel() {
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const intervalId = setInterval(nextSlide, 6000); // Change every 5 seconds
+
+    return () => clearInterval(intervalId); // Clear the interval on component unmount
+  }, []);
 
   return (
     <div className="relative mx-auto">

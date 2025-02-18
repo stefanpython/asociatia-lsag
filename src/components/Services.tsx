@@ -30,13 +30,13 @@ const servicii = [
     titlu: "Kinetoterapie",
     descriere:
       "Dezvoltă abilitățile motrice și oferă stabilitate prin exerciții fizice adaptate nevoilor individuale.",
-    imagine: "/kineto.jpg",
+    imagine: "./kineto.jpg",
   },
   {
     titlu: "Logopedie",
     descriere:
       "Se concentrează pe restaurarea și stabilizarea limbajului, aplicând tehnici specifice pentru îmbunătățirea comunicării.",
-    imagine: "/logop.jpg",
+    imagine: "./logop.jpg",
   },
 ];
 

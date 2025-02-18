@@ -6,25 +6,25 @@ const projects = [
     titlu: "Muzică și Ritm",
     descriere:
       "Copiii explorează lumea sunetelor prin diverse instrumente muzicale, dezvoltând coordonarea și creativitatea.",
-    imagine: "/projects/muzica.jpg",
+    imagine: "./projects/muzica.jpg",
   },
   {
     titlu: "Exerciții Fizice",
     descriere:
       "Un program activ ce îmbunătățește sănătatea și motricitatea prin jocuri și exerciții fizice adaptate.",
-    imagine: "/projects/exercitii.jpg",
+    imagine: "./projects/exercitii.jpg",
   },
   {
     titlu: "Ateliere de Creativitate",
     descriere:
       "Activități artistice și de bricolaj care stimulează imaginația și încrederea în sine.",
-    imagine: "/projects/arte.jpg",
+    imagine: "./projects/arte.jpg",
   },
   {
     titlu: "Socializare și Jocuri de Grup",
     descriere:
       "Copiii învață să interacționeze și să colaboreze prin activități de echipă și jocuri interactive.",
-    imagine: "/projects/socializare.jpg",
+    imagine: "./projects/socializare.jpg",
   },
 ];
 

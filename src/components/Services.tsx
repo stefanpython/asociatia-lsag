@@ -6,25 +6,25 @@ const servicii = [
     titlu: "Neurofeedback",
     descriere:
       "O metodă de antrenament cerebral care ajută la îmbunătățirea concentrării, gestionarea stresului și autoreglarea emoțională prin monitorizarea undelor cerebrale.",
-    imagine: "/neurofeedback.jpg",
+    imagine: "./neurofeedback.jpg",
   },
   {
     titlu: "Terapie Comportamentală",
     descriere:
       "O abordare terapeutică ce vizează reducerea comportamentelor nefuncționale și îmbunătățirea celor deficitare.",
-    imagine: "/comp.jpg",
+    imagine: "./comp.jpg",
   },
   {
     titlu: "Terapie Ocupațională",
     descriere:
       "Ajută persoanele să-și recâștige independența în activitățile zilnice, îmbunătățind abilitățile cognitive, fizice și motorii.",
-    imagine: "/ocupa.jpg",
+    imagine: "./ocupa.jpg",
   },
   {
     titlu: "Terapie prin Joc",
     descriere:
       "Contribuie la dezvoltarea abilităților copiilor prin joacă și socializare, facilitând învățarea și comunicarea.",
-    imagine: "/joc.jpg",
+    imagine: "./joc.jpg",
   },
   {
     titlu: "Kinetoterapie",

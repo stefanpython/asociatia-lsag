@@ -50,7 +50,7 @@ export default function Navbar() {
             <div className="rounded-3xl overflow-hidden">
               <a href="/">
                 <img
-                  src="/original.png"
+                  src="./original.png"
                   alt="Logo"
                   className="h-16 w-16 sm:h-20 sm:w-20 mr-2"
                 />

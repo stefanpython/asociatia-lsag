@@ -17,7 +17,7 @@ export default function Carousel() {
 
   // Auto-slide functionality
   useEffect(() => {
-    const intervalId = setInterval(nextSlide, 6000); // Change every 5 seconds
+    const intervalId = setInterval(nextSlide, 5000); // Change every 5 seconds
 
     return () => clearInterval(intervalId); // Clear the interval on component unmount
   }, []);

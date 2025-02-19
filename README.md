@@ -11,9 +11,7 @@ Check out the live version of the website here: [Live Link](https://stefanpython
 ## Features
 
 - Informational pages about the association and its mission
-- Donation and support options
 - Contact form for inquiries
-- Blog section for news and updates
 - Responsive design for all devices
 
 ## Tech Stack

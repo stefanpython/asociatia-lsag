@@ -48,7 +48,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
             <div className="rounded-3xl overflow-hidden">
-              <a href="/">
+              <a href="/asociatia-lsag">
                 <img
                   src="./original.png"
                   alt="Logo"
@@ -59,7 +59,7 @@ export default function Navbar() {
 
             <div>
               <div className="text-xl font-bold">Asociatia</div>
-              <a href="/" className="text-xl font-bold">
+              <a href="/asociatia-lsag" className="text-xl font-bold">
                 <span className="italic text-2xl sm:text-3xl">
                   "Lasa-ma sa-ti aud glasul"
                 </span>
